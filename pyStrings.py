@@ -20,12 +20,13 @@ def str_to_num(p_str):
 
     for x in range(0, 2):
         a = p_str[x]
-        if a != '0' | x > 0:
+        if (a != '0') | (x > 0):
             str_str += p_str[x]
 
     str_str += "."
     for x in range(3, 5):
-        if a != '0' | x > 3:
+        a = p_str[x]
+        if (a != '0') | (x > 3):
             str_str += p_str[x]
 
     return pd.to_numeric(str_str)
