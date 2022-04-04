@@ -16,19 +16,18 @@ def get_success():
 
 def str_to_num(p_str):
 
-    str_str = ""
-
-    for x in range(0, 2):
-        a = p_str[x]
-        if (a != '0') | (x > 0):
-            str_str += p_str[x]
-
-    str_str += "."
-    for x in range(3, 5):
-        str_str += p_str[x]
+    str_str = ''
+    for x in range(0, 5):
+        if x == 2:
+            str_str += '.'
+        else:
+            a = p_str[x]
+            if (x == 0) & (a == '0'):
+                pass
+            else:
+                str_str += a
 
     return pd.to_numeric(str_str)
-
 
 if __name__ == '__main__':
     get_success()
