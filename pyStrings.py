@@ -25,9 +25,7 @@ def str_to_num(p_str):
 
     str_str += "."
     for x in range(3, 5):
-        a = p_str[x]
-        if (a != '0') | (x > 3):
-            str_str += p_str[x]
+        str_str += p_str[x]
 
     return pd.to_numeric(str_str)
 
